@@ -17,8 +17,9 @@
 ORG=com.wonderingwall
 
 ## 检测参数，输入项目名称
-if [ -z $1 ] ; then
-	read -p "Type a project name [flutter_app]" PROJECT_NAME
+if [ -z "$1" ] ; then
+  echo "Type a project name [flutter_app_name]"
+	read -r PROJECT_NAME
 else
 	echo "not null echo $1"
 	PROJECT_NAME=$1
@@ -26,4 +27,4 @@ fi
 
 echo "We created project with name '$PROJECT_NAME'"
 
-flutter create --project-name ${PROJECT_NAME} --org $ORG ${PROJECT_NAME}
+flutter create --project-name "${PROJECT_NAME}" --org $ORG "${PROJECT_NAME}"
