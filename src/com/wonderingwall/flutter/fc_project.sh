@@ -27,4 +27,4 @@ fi
 
 echo "We created project with name '$PROJECT_NAME'"
 
-flutter create --project-name "${PROJECT_NAME}" --org $ORG "${PROJECT_NAME}"
+flutter create --project-name "${PROJECT_NAME}" --platforms android,ios --org $ORG "${PROJECT_NAME}"

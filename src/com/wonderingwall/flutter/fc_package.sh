@@ -1,6 +1,6 @@
 #!/bin/bash
 # ****************************************************************************************
-#  Flutter 创建项目命令
+#  Flutter 创建package项目命令
 #  version    : @version@
 #  author     : @author@
 #  date       : @date@
@@ -18,7 +18,7 @@ ORG=com.wonderingwall
 
 ## 检测参数，输入项目名称
 if [ -z "$1" ] ; then
-  echo "Type a project name [flutter_app_name]"
+  echo "Type a package name [flutter_package_name]"
 	read -r PROJECT_NAME
 else
 	echo "not null echo $1"
@@ -27,4 +27,4 @@ fi
 
 echo "We created project with name '$PROJECT_NAME'"
 
-flutter create --project-name "${PROJECT_NAME}" --org $ORG "${PROJECT_NAME}"
+flutter create -t package --project-name "${PROJECT_NAME}" --org $ORG -a java -i swift "${PROJECT_NAME}"

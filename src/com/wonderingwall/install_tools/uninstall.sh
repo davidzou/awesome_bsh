@@ -17,13 +17,13 @@
 
 COMMAND=@command@
 
-RESULT=`which ${COMMAND}`
+RESULT=$(which ${COMMAND})
 
 if [[ -z ${RESULT} ]]; then
     echo "Not found ${COMMAND}"
 else
     if [[ -L ${RESULT} ]] ; then
-        rm ${RESULT}
+        rm "${RESULT}"
         echo "Remove old command -- ${RESULT}"
     fi
 fi
